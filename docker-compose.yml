@@ -1,0 +1,13 @@
+version: "3"
+services:
+  deno:
+    build:
+      context: ./
+    ports:
+      - 3001:3001
+    volumes:
+      - ./.env:/app/.env:ro
+networks:
+  webnetwork:
+    name: dev_network
+    driver: bridge
