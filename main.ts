@@ -3,7 +3,7 @@ const env = await load();
 
 const port = 3001;
 const redeployKey = env["REDEPLOY_KEY"];
-console.log("deployment key", redeployKey);
+
 const handler = async (request: Request): Promise<Response> => {
   const incomingUrl = new URL(request.url);
   const key = incomingUrl.searchParams.get("key");
